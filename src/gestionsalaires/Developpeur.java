@@ -18,7 +18,6 @@ public class Developpeur extends Employe {
         return (1900 + anciennete * 100);
     }
 
-    @Override
     public String getDescription() {
         return super.getDescription();
     }
