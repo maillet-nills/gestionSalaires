@@ -10,8 +10,4 @@ public class Administratif extends Employe{
     public double getSalaire() {
         return (1900 + anciennete * 100);
     }
-
-    public String getDescription() {
-        return super.getDescription();
-    }
 }

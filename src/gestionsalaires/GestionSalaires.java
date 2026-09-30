@@ -19,11 +19,13 @@ public class GestionSalaires {
         // CLOTURE DU TICKET ID 8 PayMaster[1447]
         // CLOTURE DU TICKET ID 10 PayMaster[1448]
         // CLOTURE DU TICKET ID 11 PayMaster[1449]
-        Developpeur d = new Developpeur("Durand", "Michel", 4, "python", true);
+        Developpeur d = new Developpeur("Durand", "Michel", 4, "python");
         Manager m = new Manager("Dupont", "Lucie", 2);
+        DeveloppeurExpert de = new DeveloppeurExpert("Baron", "Emma", 1, "php");
         
         System.out.println(d.getDescription());
         System.out.println(m.getDescription());
+        System.out.println(de.getDescription());
 
         // CLOTURE DU TICKET ID 9 PayMaster[1448]
         Administratif a = new Administratif("Bastide", "Kimy", 3);

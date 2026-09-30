@@ -18,8 +18,4 @@ public class Manager extends Employe{
         return (2200+anciennete*110);
     }
 
-    public String getDescription() {
-        return super.getDescription();
-    }
-
 }

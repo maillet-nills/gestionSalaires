@@ -11,15 +11,10 @@ package gestionsalaires;
 public class Developpeur extends Employe {
 
     private String langage;
-    private boolean isExpert;
 
-    public Developpeur(String nom, String prenom, int anciennete, String langage, boolean isExpert) {
-        String poste = "développeur";
-        if (isExpert) poste = "développeur expert";
-
-        super(nom, prenom, anciennete, poste);
+    public Developpeur(String nom, String prenom, int anciennete, String langage) {
+        super(nom, prenom, anciennete, "développeur");
         this.langage = langage;
-        this.isExpert = isExpert;
     }
 
     @Override
@@ -31,16 +26,10 @@ public class Developpeur extends Employe {
             default -> 0;
         };
 
-        double salaire = (prime + 1900 + anciennete * 100);
-
-        if (isExpert){
-            return salaire + (salaire * 0.1);
-        } else {
-            return salaire;
-        }
-
+        return (prime + 1900 + anciennete * 100);
     }
 
+    @Override
     public String getDescription() {
         return super.getDescription() + " C'est un développeur spécialisé en " + langage + ".";
     }
