@@ -11,22 +11,34 @@ package gestionsalaires;
 public class Developpeur extends Employe {
 
     private String langage;
+    private boolean isExpert;
 
-    public Developpeur(String nom, String prenom, int anciennete, String langage) {
-        super(nom, prenom, anciennete, "Developpeur");
+    public Developpeur(String nom, String prenom, int anciennete, String langage, boolean isExpert) {
+        String poste = "développeur";
+        if (isExpert) poste = "développeur expert";
+
+        super(nom, prenom, anciennete, poste);
         this.langage = langage;
+        this.isExpert = isExpert;
     }
 
     @Override
-    public int getSalaire() {
-        int prime = switch (langage) {
+    public double getSalaire() {
+        double prime = switch (langage) {
             case "java" -> 50;
             case "python" -> 70;
             case "php" -> 45;
             default -> 0;
         };
 
-        return (prime + 1900 + anciennete * 100);
+        double salaire = (prime + 1900 + anciennete * 100);
+
+        if (isExpert){
+            return salaire + (salaire * 0.1);
+        } else {
+            return salaire;
+        }
+
     }
 
     public String getDescription() {

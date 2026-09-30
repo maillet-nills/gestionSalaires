@@ -18,7 +18,8 @@ public class GestionSalaires {
 
         // CLOTURE DU TICKET ID 8 PayMaster[1447]
         // CLOTURE DU TICKET ID 10 PayMaster[1448]
-        Developpeur d = new Developpeur("Durand", "Michel", 4, "java");
+        // CLOTURE DU TICKET ID 11 PayMaster[1449]
+        Developpeur d = new Developpeur("Durand", "Michel", 4, "python", true);
         Manager m = new Manager("Dupont", "Lucie", 2);
         
         System.out.println(d.getDescription());
