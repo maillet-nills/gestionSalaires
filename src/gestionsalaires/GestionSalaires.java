@@ -22,6 +22,12 @@ public class GestionSalaires {
         
         System.out.println(d.getDescription());
         System.out.println(m.getDescription());
+
+        // CLOTURE DU TICKET ID 9 PayMaster[1448]
+        Administratif a = new Administratif("Bastide", "Kimy", 3);
+
+        System.out.println(a.getDescription());
+
     }
     
 }
