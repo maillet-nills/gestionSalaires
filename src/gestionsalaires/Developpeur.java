@@ -9,16 +9,27 @@ package gestionsalaires;
  * @author maxim
  */
 public class Developpeur extends Employe {
-    public Developpeur(String nom, String prenom, int anciennete) {
+
+    private String langage;
+
+    public Developpeur(String nom, String prenom, int anciennete, String langage) {
         super(nom, prenom, anciennete, "Developpeur");
+        this.langage = langage;
     }
 
     @Override
     public int getSalaire() {
-        return (1900 + anciennete * 100);
+        int prime = switch (langage) {
+            case "java" -> 50;
+            case "python" -> 70;
+            case "php" -> 45;
+            default -> 0;
+        };
+
+        return (prime + 1900 + anciennete * 100);
     }
 
     public String getDescription() {
-        return super.getDescription();
+        return super.getDescription() + " C'est un développeur spécialisé en " + langage + ".";
     }
 }
