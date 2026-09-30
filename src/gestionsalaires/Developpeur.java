@@ -9,8 +9,8 @@ package gestionsalaires;
  * @author maxim
  */
 public class Developpeur extends Employe {
-    public Developpeur(String nom, String prenom, int anciennete, String poste) {
-        super(nom, prenom, anciennete, poste);
+    public Developpeur(String nom, String prenom, int anciennete) {
+        super(nom, prenom, anciennete, "Developpeur");
     }
 
     @Override

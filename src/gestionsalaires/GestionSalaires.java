@@ -17,8 +17,8 @@ public class GestionSalaires {
         // Tests applicatifs
 
         // CLOTURE DU TICKET ID 8 PayMaster[1447]
-        Developpeur d = new Developpeur("Durand", "Michel", 4, "Developpeur");
-        Manager m = new Manager("Dupont", "Lucie", 2, "Manager");
+        Developpeur d = new Developpeur("Durand", "Michel", 4);
+        Manager m = new Manager("Dupont", "Lucie", 2);
         
         System.out.println(d.getDescription());
         System.out.println(m.getDescription());
