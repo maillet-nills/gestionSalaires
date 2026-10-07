@@ -32,6 +32,15 @@ public class GestionSalaires {
 
         System.out.println(a.getDescription());
 
+        // TP SUR LE POLYMORPHISME
+        Service service = new Service();
+
+        service.AjouterEmploye(d);
+        service.AjouterEmploye(m);
+        service.AjouterEmploye(de);
+        service.AjouterEmploye(a);
+
+        service.ListerEmployes();
     }
     
 }
